@@ -1,0 +1,16 @@
+{
+  "name": "SensorsIO",
+  "version": "0.0.1",
+  "description": "SensorsIO",
+  "main": "index.js",
+    "author": {
+        "name": "pkolt",
+        "email": "pkdev14@gmail.com"
+    },
+  "license": "GPLv3",
+  "repository": "pkoltun/SensorsIO",
+  "dependencies": {
+    "mocha": "^1.21.5",
+    "ws": "^0.4.32"
+  }
+}
