@@ -12,7 +12,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>8f87087d-f5eb-4cf8-a41b-707b03187222</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>winDisplayServer.js</StartupFile>
+    <StartupFile>example\server.js</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -36,6 +36,7 @@
     <Compile Include="lib\Sensor.js" />
     <Compile Include="lib\SensorsServer.js" />
     <Compile Include="lib\SensorUtils.js" />
+    <Compile Include="lib\WebSocketServer.js" />
     <Compile Include="test\ProcessSensorTest.js">
       <SubType>Code</SubType>
       <TestFramework>Mocha</TestFramework>

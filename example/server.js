@@ -2,13 +2,18 @@
 var http = require("http");
 var sensor = require('../lib/Sensor.js');
 var SensorsServer = new require('../lib/SensorsServer.js');
+var WebSocketServer = require('../lib/WebSocketServer.js');
+
+var httpServer = new WebSocketServer.WSSensorsHttpServer();
 
 var port = process.env.port || 1337;
 var server = http.createServer(function (req, res) {
     res.writeHead(200, { 'Content-Type': 'text/html' });
-    var html = "<html> <body>\n";
-    var html = html + sensorsServer.renderSensors();
-    var html = html + " </body></html>\n";
+    var html = "<html>\n"
+    html = html + httpServer.connectionScript;
+    html = html + "\n<body>\n";
+    html = html + sensorsServer.renderSensors(httpServer);
+    html = html + " </body></html>\n";
     res.end(html);
 });
 

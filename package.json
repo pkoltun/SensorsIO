@@ -1,7 +1,7 @@
 {
-  "name": "SensorsIO",
+  "name": "sensors-io",
   "version": "0.0.1",
-  "description": "SensorsIO",
+  "description": "sensors-io",
   "main": "index.js",
     "author": {
         "name": "pkolt",

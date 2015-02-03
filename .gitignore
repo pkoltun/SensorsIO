@@ -43,3 +43,5 @@ Temporary Items
 .apdisk
 *.dat
 node_modules/.bin/
+node_modules/
+SensorsIO.v12.suo
