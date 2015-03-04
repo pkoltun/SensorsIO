@@ -46,3 +46,8 @@ node_modules/.bin/
 node_modules/
 SensorsIO.v12.suo
 *.suo
+SensorsIO.v12.suo
+obj/Debug/SensorsIO.njsproj.FileListAbsolute.txt
+obj/Debug/SensorsIO.njsprojResolveAssemblyReference.cache
+*.suo
+bin/Microsoft.NodejsTools.WebRole.dll

@@ -1,13 +1,18 @@
 {
   "name": "sensors-io",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "sensors-io",
   "main": "index.js",
-    "author": {
-        "name": "pkolt",
-        "email": "pkdev14@gmail.com"
-    },
-  "license": "GPLv3",
+  "author": {
+    "name": "pkolt",
+    "email": "pkdev14@gmail.com"
+  },
+  "files": [
+    "README.md",
+    "index.js",
+    "lib/"
+  ],
+  "license": "MIT",
   "repository": "pkoltun/SensorsIO",
   "dependencies": {
     "mocha": "^1.21.5",

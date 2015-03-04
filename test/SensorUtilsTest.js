@@ -6,7 +6,7 @@ var sensorUtils = require('../lib/SensorUtils');
 var SensorsServer = new require('../lib/SensorsServer.js');
 var WebSocket = require('ws');
 var Server = SensorsServer.Server;
-var serverPort = 8085;
+var serverPort = 8075;
 var serverAddress = 'ws://localhost:' + serverPort + '/';
 
 

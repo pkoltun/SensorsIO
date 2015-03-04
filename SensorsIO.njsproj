@@ -35,6 +35,7 @@
     <Compile Include="lib\ProcessSensor.js" />
     <Compile Include="lib\Sensor.js" />
     <Compile Include="lib\SensorsServer.js" />
+    <Compile Include="lib\SensorsServerTest.js" />
     <Compile Include="lib\SensorUtils.js" />
     <Compile Include="lib\WebSocketServer.js" />
     <Compile Include="test\ProcessSensorTest.js">
