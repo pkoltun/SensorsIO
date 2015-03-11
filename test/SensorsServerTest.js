@@ -4,18 +4,23 @@ var http = require("http");
 var WebSocketServer = require('../lib/WebSocketServer.js');
 var WSConnection = WebSocketServer.WSConnection;
 
+
 var createServer = function ( addSensors, done) {
     server = http.createServer(function (req, res) {
         res.writeHead(200, { 'Content-Type': 'text/plain' });
         res.end('Test server');
     });
-    var sensorsServer = new SensorsServer.Server(server);
+    var createServer = WebSocketServer.getWSServerCreator(server);
+    var sensorsServer = new SensorsServer.Server(server, serverPort, [createServer]);
     addSensors(sensorsServer);
     sensorsServer.httpServer.listen(serverPort, function () {
         done();
     });
     return sensorsServer;
 }
+
+this.createSocketServer = function (path, logger, handleMessage) {  };
+
 
 var destroySensorServer = function (sensorsServer){
     sensorsServer.close();

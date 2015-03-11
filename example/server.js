@@ -17,12 +17,12 @@ var server = http.createServer(function (req, res) {
     res.end(html);
 });
 
-var customState = {
-    on: false,
-    name: "None"
-};
-
 function CustomSensor() {
+    var customState = {
+        on: false,
+        name: "None"
+    };
+
     sensor.Sensor.call(this, customState);
     this.readOnly = false;
 }
@@ -50,7 +50,8 @@ setInterval(changeState, 1500);
 
 var sensorWithMessage = new CustomSensor();
 
-sensorWithMessage.name = "withMessage";
+changingSensor.name = "Sensor with server state updates";
+sensorWithMessage.name = "Same sensor with 2 different paths";
 
 sensorsServer.addSensor(changingSensor, 'modifyStateTest');
 sensorsServer.addSensor(sensorWithMessage, 'modifyStateWithMessageTest');

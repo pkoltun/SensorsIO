@@ -3,6 +3,7 @@ var util = require("util");
 var http = require("http");
 var sensor = require('../lib/Sensor.js');
 var sensorUtils = require('../lib/SensorUtils');
+var WebSocketServer = require('../lib/WebSocketServer.js');
 var SensorsServer = new require('../lib/SensorsServer.js');
 var WebSocket = require('ws');
 var Server = SensorsServer.Server;
@@ -36,8 +37,9 @@ describe('Sensor utils tests', function () {
             res.end('Test server');
         });
         
-        sensorsServer = new Server(server);
-        
+        var createServer = WebSocketServer.getWSServerCreator(server);
+        sensorsServer = new SensorsServer.Server(server, serverPort, [createServer]);
+                
         sensorsServer.addSensor(sensorOne, 'sensor');
         sensorsServer.addSensor(sensorTwo, 'sensor2');
         
