@@ -33,7 +33,7 @@ util.inherits(CustomSensor, sensor.Sensor);
 var sensorState = {};
 var sensorsServer = null;
 
-sensorsServer = new SensorsServer.Server(server, port);
+sensorsServer = new SensorsServer.Server(server, port, [WebSocketServer.getWSServerCreator(server)]);
 
 var changingSensor = new CustomSensor();
 
